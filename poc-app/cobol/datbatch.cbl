@@ -1,7 +1,6 @@
        ID DIVISION.
        PROGRAM-ID. DATBATCH.
       *
-      * Simple demo code (NLopez) on local zDT v6.8
       * Use Pub GITHUB project's DEVELOP branch
       * References COMMON Copybook  DATSHARE
        ENVIRONMENT DIVISION.
@@ -16,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH Demo UCD verb 115'.
+           DISPLAY 'DATBATCH Demo v3'.
       *
       *========= display copybook literals
       *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
