@@ -1,6 +1,6 @@
        ID DIVISION.
        PROGRAM-ID. DATBATCH.
-      *
+      * az test
       * Use Pub GITHUB project's DEVELOP branch
       * References COMMON Copybook  DATSHARE
        ENVIRONMENT DIVISION.
