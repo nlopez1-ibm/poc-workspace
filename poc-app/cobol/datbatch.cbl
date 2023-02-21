@@ -11,7 +11,7 @@
           05  num1         PIC 9(3) value zeros.
           05  num2         PIC 9(3) value is 005.
       *
-        COPY DATDEPND.
+      * COPY DATDEPND.
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
