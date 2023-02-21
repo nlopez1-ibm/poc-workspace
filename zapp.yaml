@@ -7,6 +7,10 @@
 # CONTRACT WITH IBM CORPORATION
 ################################################################
 
+## njl hard code stuff to get it up and running fast.  can be improved.
+## not sure where to put old var in vscode json setting here.  exemple did not have them???
+
+
 name: poc-app-zapp
 description: For IBM Z Open Editor 3.0.0 or newer. Wazi's code samples with COBOL, PL/I, and HLASM applications
 version: 3.0.0
