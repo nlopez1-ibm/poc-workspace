@@ -15,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH Demo v6'.
+           DISPLAY 'DATBATCH Demo v7'.
       *
       *========= display copybook literals
       *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
