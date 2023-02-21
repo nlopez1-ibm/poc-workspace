@@ -1,22 +1,67 @@
-################################################################
-# LICENSED MATERIALS - PROPERTY OF IBM
-# "RESTRICTED MATERIALS OF IBM"
-# (C) COPYRIGHT IBM CORPORATION 2020, 2022. ALL RIGHTS RESERVED
-# US GOVERNMENT USERS RESTRICTED RIGHTS - USE, DUPLICATION,
-# OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE
-# CONTRACT WITH IBM CORPORATION
-################################################################
+## notes on usage NLopez
+## IBM Open Editor v3 now takes zapp.yaml files and some vsCode settings.json definitions to setup a user build
+## I've added comments on this example to explain how it works 
+##  
+## First install zowe and ibm open editor extensions
+## create a zowe profile for zosmf (VSI) and ssh
+## add them as the default in settings.json:
+##    "zopeneditor.zowe": { 			
+##       "defaultCliProfile": "zosmf",			
+##       "defaultSshCliProfile": "ssh"		 	
+##    },
+## 
+##
+## Add these required settings to settings.json - (dont have to pre-define the dir):
+##  "zopeneditor.userbuild.userSettings": {
+##     "dbbWorkspace": "/u/ibmuser/vsCode_workspace",
+##     "dbbHlq": "IBMUSER.VSCODE",
+##     "dbbLogDir": "/u/nlopez/vsCode_workspace/logs" 
+##   }, 
 
-## njl hard code stuff to get it up and running fast.  can be improved.
-## not sure where to put old var in vscode json setting here.  exemple did not have them???
+## use the userSettings variable below
 
 
 name: poc-app-zapp
-description: For IBM Z Open Editor 3.0.0 or newer. Wazi's code samples with COBOL, PL/I, and HLASM applications
+description: Nelson example IBM Z Open Editor 3.0.0 zapp.yaml 
 version: 3.0.0
 author:
-  name: IBM CORPORATION
+  name: Nelson Lopez
 
+profiles:
+  - name: dbb-userbuild
+    type: dbb
+    settings:
+# this is misleading as it the high level folder for the app folder.  should be DBBworkspace    
+      application: poc-workspace
+
+# DBB_HOME as set by .profile and the installed zappbuild folder 
+      command: "$DBB_HOME/bin/groovyz "
+      buildScriptPath: "/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy"
+
+# Standard user build options with refs to settings.json 
+      buildScriptArgs:
+        - "--userBuild"
+# add teh workspace folder         
+        - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}/poc-workspace"
+        - "--application poc-app"
+        - "--hlq  ${zopeneditor.userbuild.userSettings.dbbHlq}"
+        - "--outDir  ${zopeneditor.userbuild.userSettings.dbbLogDir}"
+# Not used 
+#        - "--dependencyFile ${dependencyFile}"
+
+# stuff to copy to uss workspace
+      additionalDependencies:
+        - "**/application-conf"
+        - "zapp*"
+
+# stuf to copy to vsCode workspace
+      logFilePatterns:
+        - "${buildFile.basename}.log"
+        - "BuildReport.*"
+
+
+# other files scanned by the editor to copy to USS 
+# and other PDSs (not really used)
 propertyGroups:
   - name: cobol-copybooks
     language: cobol
@@ -33,24 +78,4 @@ propertyGroups:
         type: mvs
         locations:
           - IBMUSER.IDZ.COPYLIB
-     
-profiles:
-  - name: dbb-userbuild
-    type: dbb
-    settings:
-      application: poc-app
-      command: "$DBB_HOME/bin/groovyz "
-      buildScriptPath: "/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy"
-      buildScriptArgs:
-        - "--userBuild"
-        - "--workspace /u/ibmuser/vsCode_workspace/poc-app"
-        - "--application poc-app"
-        - "--hlq IBMUSER.VSC"
-        - "--outDir /u/ibmuser/vsCode_workspace/dbb-logs"
-        - "--dependencyFile ${dependencyFile}"
-      additionalDependencies:
-        - application-conf
-        - "zapp*"
-      logFilePatterns:
-        - "${buildFile.basename}.log"
-        - "BuildReport.*"
+             
