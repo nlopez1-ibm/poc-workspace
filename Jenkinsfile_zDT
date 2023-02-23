@@ -3,6 +3,7 @@
 // for help: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
  
 // change these values to match your configuration
+// old version for reference only
 def myAgent  = 'myZOS-Agent'
 def repo = 'git@github.com:nlopez1-ibm/poc-workspace.git'
 
