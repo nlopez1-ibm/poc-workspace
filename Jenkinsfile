@@ -2,15 +2,16 @@
 // for help: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
  
 // change these values to match your configuration
+// sample scripts are @ '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts'
+
 def myAgent  = 'zvsi'
 def repo = 'git@github.com:nlopez1-ibm/poc-workspace.git'
-def scriptsHome = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts'
 
-def dbbbuild ='/u/nlopez/tmp/dbb-zappbuild/build.groovy'
+def dbbbuild ='/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy'
 def appworkspace = 'poc-workspace'
 def appname = 'poc-app'
 
-def ucdPublish =${scriptsHome}'/UCD/dbb-ucd-packaging.groovy' 
+def ucdPublish = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts/UCD/dbb-ucd-packaging.groovy' 
 def buzTool  = '/u/ibmuser/ibm-ucd/agent/bin/buztool.sh'
 def ucdComponent = 'poc-app'
 
