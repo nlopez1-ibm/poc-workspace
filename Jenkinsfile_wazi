@@ -7,7 +7,7 @@ def myApp       = 'poc-app'
 scripts         = '/u/nlopez/waziDBB/dbb-zappbuild/scripts'
 
 pipeline {
-    agent  { label 'myWazi-Agent' }
+    agent  { label 'zvsi' }
     options { skipDefaultCheckout(true) }
 
     stages {
