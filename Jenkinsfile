@@ -1,42 +1,52 @@
-// Sample Jenkinsfile using ssh and myMazi for CI only    (Nlopez)
-//
-def myApp       = 'poc-app'
-scripts         = '/u/nlopez/waziDBB/dbb-zappbuild/scripts'
+// Sample Jenkinsfile using pGH, ssh and a zDT Agent (Nlopez)
+// for help: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
+ 
+// change these values to match your configuration
+def myAgent  = 'zvsi'
+def repo = 'git@github.com:nlopez1-ibm/poc-workspace.git'
+def scriptsHome = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts'
 
+def dbbbuild ='/u/nlopez/tmp/dbb-zappbuild/build.groovy'
+def appworkspace = 'poc-workspace'
+def appname = 'poc-app'
+
+def ucdPublish =${scriptsHome}'/UCD/dbb-ucd-packaging.groovy' 
+def buzTool  = '/u/ibmuser/ibm-ucd/agent/bin/buztool.sh'
+def ucdComponent = 'poc-app'
+
+// no changes required to this section 
 pipeline {
-    agent  { label 'zvsi' }
+    agent  { label myAgent } 
     options { skipDefaultCheckout(true) }
-
+    
     stages {
         stage('Clone') {
             steps {
-                println '** Cloning on USS ...'                             
-                //sh 'rm -r ' + env.WORKSPACE+'/* >/dev/null 2>&1 ; ' + scripts+'/CI/Clone2.sh ' +  env.WORKSPACE + ' ' +  myApp + ' git@github.com:nlopez1-ibm/poc-workspace.git ' + env.BRANCH_NAME 
-                //sh scripts+'/CI/Clone2.sh ' +  env.WORKSPACE + '  poc-workspace  git@github.com:nlopez1-ibm/poc-workspace.git ' + env.BRANCH_NAME 
-                sh 'git -version'
+                println '** Cloning on USS ...'     
+                script {
+                    sh 'rm -rf *'
+                    sh 'git clone ' + repo 
+                    sh 'cd ' + appworkspace  + '; git log --graph --oneline --decorate -n 3'
+                }
             }          
         }  
 
         stage('Build') {
             steps {
-                println  '** SKIP    Building feature with DBB ...'                  
-                //sh scripts+'/CI/Build.sh ' + env.WORKSPACE + ' poc-workspace  ' + myApp + ' --userBuild poc-app/cobol/datbatch.cbl'
+                println  '** Building one pgm with DBB ...'                  
+                script {
+                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER + ' poc-app/cobol/datbatch.cbl'
+                }
             }
-        }             
+        }
 
-
-//        stage('Package') {
-//            steps {
-//                println  '** Packaging artifacts ...'
-//                sh scripts+'/CI/Package_Create.sh ' +  env.WORKSPACE + ' poc-workspace  ' + ' poc-app ' +  env.BUILD_ID 
-//            }
-//        }                
-
-        //stage('Publish') {
-        //    steps {
-        //        println  '** Packaging artifacts and Publishing to UCD Code Station ...'
-        //        sh scripts+'/CD/UCD_Pub.sh ' + env.BUILD_ID + ' poc-app ' + env.WORKSPACE+'/poc-workspace  '
-        //    }
-        //}                
+        stage('Publish') {
+            steps {
+                println  '** Package and Publish to UCDs CodeStation...'                  
+                script {
+                    sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
+                }
+            }
+        }
     }    
 }
