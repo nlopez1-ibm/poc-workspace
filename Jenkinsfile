@@ -36,7 +36,7 @@ pipeline {
             steps {
                 println  '** Building one pgm with DBB ...'                  
                 script {
-                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER + ' poc-app/cobol/datbatch.cbl'
+                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' poc-app/cobol/datbatch.cbl'
                 }
             }
         }
