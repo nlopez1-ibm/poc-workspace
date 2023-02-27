@@ -4,7 +4,8 @@
 //*
 //DBB     EXEC PGM=DATBATCH
 //*STEPLIB  DD  DISP=SHR,DSN=ZDEV.MAIN.LOAD     ucd  Loadlib
-//STEPLIB  DD  DISP=SHR,DSN=NLOPEZ.VSC.LOAD   vscode Loadlib
+//*STEPLIB  DD  DISP=SHR,DSN=NLOPEZ.VSC.LOAD   vscode Loadlib
+//STEPLIB  DD  DISP=SHR,DSN=IBMUSER.JENKINS.LOAD   vscode Loadlib
 //SYSPRINT DD SYSOUT=*
 //SYSOUT   DD SYSOUT=*
 //**********************************************************
