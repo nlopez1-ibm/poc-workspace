@@ -37,7 +37,7 @@ pipeline {
                 println  '** Building with DBB in Impact Mode ...'                  
                 script {
 
-                    // example to build one program for quick testing ( not supported by UCD)
+                    // example to build one program for quick testing is now supported by UCD (skip impact for now)
                     sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' poc-app/cobol/datbatch.cbl'
                     
                     // do a scnonly for first time build 
