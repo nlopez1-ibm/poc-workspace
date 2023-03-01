@@ -13,7 +13,7 @@ def appname = 'poc-app'
 
 def ucdPublish = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts/UCD/dbb-ucd-packaging.groovy' 
 def buzTool  = '/u/ibmuser/ibm-ucd/agent/bin/buztool.sh'
-def ucdComponent = 'poc-component'
+def ucdComponent = 'poc-component-break'
 
 // no changes required to this section 
 pipeline {
