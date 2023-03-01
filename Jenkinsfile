@@ -50,7 +50,7 @@ pipeline {
             }
         }
 
-        stage('Publish and Deply with UCD') {
+        stage('Stage for Deploy') {
             steps {
                 println  '** Package and Publish to UCDs CodeStation...'                  
                 script {
