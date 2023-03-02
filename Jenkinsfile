@@ -47,7 +47,7 @@ pipeline {
                     
                     
                     // Normal runMode 
-                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' -v --impactBuild'
+                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' --impactBuild'
                 }
             }
         }

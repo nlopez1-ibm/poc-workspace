@@ -15,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH test some change'.
+           DISPLAY 'DATBATCH test some change v2'.
       *
       *========= display copybook literals
       *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
