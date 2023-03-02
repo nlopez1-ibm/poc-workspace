@@ -29,7 +29,7 @@
                 END-IF
            END-PERFORM.
       *========== static call example
-      *     CALL 'DATSUB'.
+           CALL 'DATSUB'.
            STOP RUN.
       *==========  v2
        dump_num1.
