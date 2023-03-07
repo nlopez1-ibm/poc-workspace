@@ -28,8 +28,8 @@
                     perform dump_num1
                 END-IF
            END-PERFORM.
-      *========== static call example
-           CALL 'DATSUB'.
+      *========== static call example - not part of depn scan? defer
+      *     CALL 'DATSUB'.
            STOP RUN.
       *==========  v2
        dump_num1.
