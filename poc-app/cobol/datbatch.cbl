@@ -2,7 +2,7 @@
        PROGRAM-ID. DATBATCH.
       * az test
       * Use Pub GITHUB project's DEVELOP branch
-      * References COMMON Copybook  DATSHARE
+      * References STATIC MOD DEMOSUB in zdev.main.load for IAC Demos
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
@@ -15,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH npe build 88 impact test v3.'
+           DISPLAY 'DATBATCH npe build 88 impact test v5.'
       *
       *========= display copybook literals
       *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
@@ -28,8 +28,8 @@
                     perform dump_num1
                 END-IF
            END-PERFORM.
-      *========== static call example - not part of depn scan? defer
-           CALL 'DATSUB'.
+      *========== static call example of an enterprise LOAD
+           CALL 'DEMOSUB'.
            STOP RUN.
       *==========  v2
        dump_num1.
