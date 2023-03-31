@@ -15,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH npe build 88 impact test v5.'
+           DISPLAY 'DATBATCH npe build 88 impact test v7.1.'
       *
       *========= display copybook literals
       *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
