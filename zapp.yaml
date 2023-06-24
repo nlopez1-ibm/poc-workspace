@@ -42,7 +42,7 @@ profiles:
       buildScriptArgs:
         - "--userBuild"
 # add teh workspace folder         
-        - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}/poc-workspace"
+        - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}/${application}"
         - "--application poc-app"
         - "--hlq  ${zopeneditor.userbuild.userSettings.dbbHlq}"
         - "--outDir  ${zopeneditor.userbuild.userSettings.dbbLogDir}"
