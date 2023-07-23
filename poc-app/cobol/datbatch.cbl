@@ -20,10 +20,10 @@
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
 
-           DISPLAY 'COPYBOOK Literal' WS-VER.
+           DISPLAY 'COPYBOOK Literal ' WS-VER.
 
       * do something ...
-           PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
+           PERFORM VARYING num1 FROM 0 BY 1 UNTIL num1 > num2
                 IF num1 > 1  THEN
                     perform dump_num1
                 END-IF
