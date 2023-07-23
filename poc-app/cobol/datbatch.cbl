@@ -24,7 +24,7 @@
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
-                IF num1 > 1  THEN
+                IF num1 > 0  THEN
                     perform dump_num1
                 END-IF
            END-PERFORM.
