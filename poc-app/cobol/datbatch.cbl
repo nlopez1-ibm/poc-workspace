@@ -20,6 +20,8 @@
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
 
+      DISPLAY 'COPYBOOK Literal' WS-VER.
+
       * do something ...
            PERFORM VARYING num1 FROM 0 BY 1 UNTIL num1 > num2
                 IF num1 > 1  THEN
