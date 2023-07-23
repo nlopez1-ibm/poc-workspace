@@ -15,10 +15,12 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH DEMO az tcs 8:29'.
+           DISPLAY 'SECTION 1 - DATBATCH DEMO @ ver 11 bf'.
       *
       *========= display copybook literals
            DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
+      
+      
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
 
