@@ -11,14 +11,12 @@
           05  num1         PIC 9(3) value zeros.
           05  num2         PIC 9(3) value is 005.
       *
-      * COPY DATDEPND.
+       COPY DATDEPND.
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH DEMO 8.2'
-      *
-      *========= display copybook literals
-      *     DISPLAY 'CPYBK=DATDEPND -> ' WS-VER.
+           DISPLAY 'SECTION 1 - DATBATCH DEMO @ ver 11 bf'.
+
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
 
