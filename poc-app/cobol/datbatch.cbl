@@ -15,7 +15,7 @@
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH DEMO @ ver 11 bf'.
+           DISPLAY 'SECTION 1 - DATBATCH PAUL v2'.
 
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
