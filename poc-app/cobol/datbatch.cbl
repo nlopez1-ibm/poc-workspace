@@ -8,21 +8,23 @@
        WORKING-STORAGE SECTION.
        01 WK-AREA1.
           05  FILLER       PIC X(80).
-          05  num1         PIC 9(3) value zeros.
-          05  num2         PIC 9(3) value is 005.
+          05  num1         PIC 9(3) value is 000.
+          05  num2         PIC 9(3) value is 003.
       *
        COPY DATDEPND.
       * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH DEMO @ ver 11 bf'.
+           DISPLAY 'SECTION 1 - DATBATCH PAUL v2'.
 
       *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
       *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
 
+           DISPLAY 'COPYBOOK Literal ' WS-VER.
+
       * do something ...
-           PERFORM VARYING num1 FROM 0 BY 1 UNTIL num1 > num2
-                IF num1 > 1  THEN
+           PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
+                IF num1 > 0  THEN
                     perform dump_num1
                 END-IF
            END-PERFORM.
