@@ -1,8 +1,6 @@
        ID DIVISION.
        PROGRAM-ID. DATBATCH.
-      * az test
-      * Use Pub GITHUB project's DEVELOP branch
-      * References STATIC MOD DEMOSUB in zdev.main.load for IAC Demos
+      *
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
@@ -12,14 +10,11 @@
           05  num2         PIC 9(3) value is 003.
       *
        COPY DATDEPND.
-      * COPY DATSHARE.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH PAUL v2'.
+           DISPLAY 'SECTION 1 - DATBATCH Dev1 v2'.
 
-      *     DISPLAY 'CPYBK=DATEMBED -> ' EMBED-VER.
-      *     DISPLAY 'CPYBK=DATSHARE -> ' shared-f1.
-
+      *
            DISPLAY 'COPYBOOK Literal ' WS-VER.
 
       * do something ...
