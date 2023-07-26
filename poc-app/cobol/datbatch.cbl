@@ -12,10 +12,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH Dev1 v2'.
-
-      *
-           DISPLAY 'COPYBOOK Literal ' WS-VER.
+           DISPLAY 'SECTION 1 - DATBATCH Dev1 v3'.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
@@ -23,8 +20,9 @@
                     perform dump_num1
                 END-IF
            END-PERFORM.
-      *========== static call example of an enterprise LOAD
-           CALL 'DEMOSUB'.
+      
+           DISPLAY 'COPYBOOK Literal ' WS-VER.
+
            STOP RUN.
       *==========  v2
        dump_num1.
