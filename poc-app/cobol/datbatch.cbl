@@ -12,7 +12,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH Dev1 v3'.
+           DISPLAY 'SECTION 1 - DATBATCH Dev1 v0.1'.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
@@ -20,7 +20,7 @@
                     perform dump_num1
                 END-IF
            END-PERFORM.
-      
+
            DISPLAY 'COPYBOOK Literal ' WS-VER.
 
            STOP RUN.
