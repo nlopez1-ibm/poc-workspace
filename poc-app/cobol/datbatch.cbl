@@ -12,7 +12,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH Dev1 v1.1'.
+           DISPLAY 'SECTION 1 - DATBATCH Dev1 v1.2'.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
