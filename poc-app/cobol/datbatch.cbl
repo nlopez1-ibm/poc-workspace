@@ -21,7 +21,7 @@
                 END-IF
            END-PERFORM.
 
-           DISPLAY 'COPYBOOK Literal ' WS-VER.
+           DISPLAY 'SECTION 2 - Test vl ' WS-VER.
 
            STOP RUN.
       *==========  v2
