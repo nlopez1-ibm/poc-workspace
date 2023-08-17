@@ -24,6 +24,6 @@
            DISPLAY 'SECTION 2 - Test vl ' WS-VER.
 
            STOP RUN.
-      *==========  v2
+      *==========  v1
        dump_num1.
            display 'Tracing num1=' num1.
