@@ -21,7 +21,7 @@
                 END-IF
            END-PERFORM.
 
-           DISPLAY 'SECTION 2 - Test vl ' WS-VER.
+           DISPLAY 'SECTION 2 - Nelson vl ' WS-VER.
 
            STOP RUN.
       *==========  ver2
