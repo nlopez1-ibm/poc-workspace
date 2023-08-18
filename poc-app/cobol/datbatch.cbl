@@ -26,4 +26,4 @@
            STOP RUN.
       *==========  ver2
        dump_num1.
-           display 'Tracing num1=' num1.
+      *     display 'Tracing num1=' num1.
