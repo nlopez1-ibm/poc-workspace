@@ -45,7 +45,7 @@ pipeline {
                     
                     
                     // Normal impact Mode  (dbb toolkit build 88+)
-                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + '-l UTF-8   -h ' + env.USER+'.JENKINS' + ' --impactBuild'
+                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -l UTF-8   -h ' + env.USER+'.JENKINS' + ' --impactBuild'
 
                     // save the build logs in utf-8 -l above 
                     archiveArtifacts artifacts: '**/.log', fingerprint: false
