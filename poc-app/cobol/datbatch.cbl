@@ -13,7 +13,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH Dev1 v1.0'.
+           DISPLAY 'SECTION 1 - DATBATCH Paul says HI'.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
@@ -22,9 +22,9 @@
                 END-IF
            END-PERFORM.
 
-           DISPLAY 'SECTION 2 - Test vl ' WS-VER.
+           DISPLAY 'SECTION 2 - Nelson vl ' WS-VER.
 
            STOP RUN.
       *==========  ver2
        dump_num1.
-           display 'Tracing num1=' num1.
+      *     display 'Tracing num1=' num1.
