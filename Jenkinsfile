@@ -48,7 +48,7 @@ pipeline {
                     sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + '-l UTF-8   -h ' + env.USER+'.JENKINS' + ' --impactBuild'
 
                     // save the build logs in utf-8 -l above 
-                    archiveArtifacts artifacts: '${WORKSPACE}/'+appworkspace/*.log', fingerprint: false
+                    archiveArtifacts artifacts: '**/.log', fingerprint: false
                 }
             }
         }
