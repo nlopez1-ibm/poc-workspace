@@ -8,12 +8,16 @@
           05  FILLER       PIC X(80).
           05  num1         PIC 9(3) value is 000.
           05  num2         PIC 9(3) value is 003.
-          05  CHAR-40-4f  PIC X(15) value '  âäàáãå'.
+          05  CHAR-40  PIC X(1) value ' '.
+          05  CHAR-41  PIC X(1) value '�'.
+          05  CHAR-42  PIC X(1) value '�'.
+          05  CHAR-4F  PIC X(1) value '�'.
       *
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 - DATBATCH Paul says HI'.
+           DISPLAY 'SECTION 1 CHAR-41' CHAR-41.
+           DISPLAY 'SECTION 1 CHAR-4F' CHAR-4F.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2

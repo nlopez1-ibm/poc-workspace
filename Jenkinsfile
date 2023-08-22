@@ -61,5 +61,13 @@ pipeline {
                 }
             }
         }
+        
+         post {
+            always {
+                echo 'Saving Logs ...'
+                archiveArtifacts artifacts: '**/*.log', fingerprint: false                
+                }
+        }       
+        
     }    
 }
