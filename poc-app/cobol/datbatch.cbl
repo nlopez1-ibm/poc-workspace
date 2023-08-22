@@ -1,6 +1,6 @@
        ID DIVISION.
        PROGRAM-ID. DATBATCH.
-      *v3f
+      *v3g
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
