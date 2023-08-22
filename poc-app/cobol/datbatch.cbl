@@ -8,7 +8,7 @@
           05  FILLER       PIC X(80).
           05  num1         PIC 9(3) value is 000.
           05  num2         PIC 9(3) value is 003.
-          05  CHAR-A-CP37  PIC X(1) value 'A'.
+          05  CHAR-40-4f  PIC X(15) value '  âäàáãåçñ¢.<(+|'.
       *
        COPY DATDEPND.
       *
