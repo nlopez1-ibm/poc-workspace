@@ -46,6 +46,9 @@ pipeline {
                     
                     // Normal impact Mode  (dbb toolkit build 88+)
                     sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' --impactBuild'
+
+                    // save the build logs
+                    archiveArtifacts artifacts: '**/*.log', fingerprint: true
                 }
             }
         }
