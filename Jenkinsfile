@@ -60,14 +60,13 @@ pipeline {
                     sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
                 }
             }
-        }
-        
-         post {
+        }        
+    }   
+    
+    post {
             always {
                 echo 'Saving Logs ...'
                 archiveArtifacts artifacts: '**/*.log', fingerprint: false                
                 }
-        }       
-        
-    }    
+    }        
 }
