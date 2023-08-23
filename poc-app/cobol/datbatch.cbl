@@ -16,8 +16,8 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 CHAR-41' CHAR-41.
-           DISPLAY 'SECTION 1 CHAR-4F' CHAR-4F.
+           DISPLAY 'SECTION 1 CHAR-41>' CHAR-41 '<'.
+           DISPLAY 'SECTION 1 CHAR-4F>' CHAR-4F '<'.
 
       * do something ...
            PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
