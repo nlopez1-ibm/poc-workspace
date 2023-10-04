@@ -78,4 +78,13 @@ propertyGroups:
         type: mvs
         locations:
           - IBMUSER.IDZ.COPYLIB
-             
+
+# pl/i include libs 
+  - name: pl1-includes
+    language: pl1
+    compilerOptions: "not(!),margins(2,100)"
+    libraries:
+      - name: syslib
+        type: local
+        locations:
+          - "**/plinc"             

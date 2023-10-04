@@ -1,0 +1,9 @@
+ DATMAIN: PROC OPTIONS(MAIN) REORDER;
+ DCL DATSUB ENTRY;
+ /*DCL  PLITDLI ENTRY EXTERNAL; */
+ PUT  SKIP LIST ('HELLO From datmain.pli');
+ CALL DATSUB;
+ /* CALL PLITDLI(); */
+ END;
+ /* Link syslib should include this app's load and system lib like */
+ /* dfhload for cics and IMS PLITDLI calls */
