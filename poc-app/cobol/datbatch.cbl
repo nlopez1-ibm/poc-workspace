@@ -18,19 +18,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'SECTION 1 CHAR-41>' CHAR-41 '<'.
-           DISPLAY 'SECTION 1 CHAR-4F>' CHAR-4F '<'.
-
-      * do something ...
-           PERFORM VARYING num1 FROM 1 BY 1 UNTIL num1 > num2
-                IF num1 > 0  THEN
-                    perform dump_num1
-                END-IF
-           END-PERFORM.
-
-           DISPLAY 'SECTION 2 - Nelson vl ' WS-VER.
-
+           DISPLAY 'demo v22'.
+          
            STOP RUN.
-      *==========  ver2
-       dump_num1.
-      *     display 'Tracing num1=' num1.
+    
