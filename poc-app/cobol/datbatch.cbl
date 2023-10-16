@@ -9,16 +9,12 @@
        01 WK-AREA1.
           05  FILLER       PIC X(80).
           05  num1         PIC 9(3) value is 000.
-          05  num2         PIC 9(3) value is 003.
-          05  CHAR-40  PIC X(1) value ' '.
-          05  CHAR-41  PIC X(1) value 'Â'.
-          05  CHAR-42  PIC X(1) value 'Ã'.
-          05  CHAR-4F  PIC X(1) value '¥'.
+          05  num2         PIC 9(3) value is 003.     
       *
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo v22'.
+           DISPLAY 'demo v16'.
           
            STOP RUN.
     
