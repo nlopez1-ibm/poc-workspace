@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo v.a.8'.
+           DISPLAY 'demo v.a.9'.
           
            STOP RUN.
     
