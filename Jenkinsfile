@@ -45,7 +45,8 @@ pipeline {
                     
                     
                     // Normal impact Mode  (dbb toolkit build 88+)
-                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -h ' + env.USER+'.JENKINS' + ' --impactBuild'
+                    sh 'groovyz ' + dbbbuild + ' -w ${WORKSPACE}/'+appworkspace  + ' -a ' + appname + ' -o ${WORKSPACE}/'+appworkspace + ' -l UTF-8   -h ' + env.USER+'.JENKINS' + ' --impactBuild'
+                   
                 }
             }
         }
@@ -57,6 +58,13 @@ pipeline {
                     sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
                 }
             }
-        }
-    }    
+        }        
+    }   
+    
+    post {
+            always {
+                echo 'Saving Logs ...'
+                archiveArtifacts artifacts: '**/*.log', fingerprint: false                
+                }
+    }        
 }

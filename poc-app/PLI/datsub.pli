@@ -1,0 +1,5 @@
+ DATSUB: PROC();
+ %INCLUDE datinc;
+ PUT  SKIP LIST ('HELLO From datsub.pli');
+ PUT  SKIP LIST (TXT2);
+ END;
