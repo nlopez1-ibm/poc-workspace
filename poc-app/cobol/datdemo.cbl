@@ -15,16 +15,26 @@
       *    COPY DFHAID.
       *
       * My test with my pre-built map
-           COPY DATMAPM.
-       PROCEDURE DIVISION.
-           DISPLAY 'Sending a test map  NEL 11:12'.
-           EXEC CICS
-                SEND MAP ('DATMLIS')
-                     MAPSET('DATMAPM')
-                     FROM(DATMLISO)
-           END-EXEC.
+
+         PROCEDURE DIVISION.
+           DISPLAY 'demo v.a.9'.
+
+           STOP RUN.
+
+
+
+
+      * old dummy out for now
+      *     COPY DATMAPM.
+      * PROCEDURE DIVISION.
+      *     DISPLAY 'Sending a test map  NEL 11:12'.
+      *     EXEC CICS
+      *          SEND MAP ('DATMLIS')
+      *               MAPSET('DATMAPM')
+      *               FROM(DATMLISO)
+      *     END-EXEC.
       *
       *  this sub is a dual mod for datbatch and datdemo
       *
-           CALL 'DATSUB'.
-           STOP RUN.
+      *     CALL 'DATSUB'.
+      *     STOP RUN.
