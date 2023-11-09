@@ -14,6 +14,6 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo NW 1.4'.
+           DISPLAY 'demo NW 1.0'.
 
            STOP RUN.
