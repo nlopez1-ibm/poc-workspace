@@ -14,6 +14,6 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo git test 1.1 clean'.
+           DISPLAY 'demo git test 1.2 clean'.
 
            STOP RUN.
