@@ -14,6 +14,6 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo git test v1.3 nomrg test'.
+           DISPLAY 'demo git test v1.4 nomrg test'.
 
            STOP RUN.
