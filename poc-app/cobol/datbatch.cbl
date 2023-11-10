@@ -14,6 +14,6 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo NW 3.2'.
+           DISPLAY 'demo git test 1.0'.
 
            STOP RUN.
