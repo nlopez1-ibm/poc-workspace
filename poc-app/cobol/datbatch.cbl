@@ -14,6 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'demo git test v1.5 chk hotfix 4'.
-
+           DISPLAY 'DATBATCH: test v1'.
+           CALL 'DEMOSUB'.
+                                                                                
            STOP RUN.
