@@ -11,7 +11,7 @@
       * My test with my pre-built map
 
          PROCEDURE DIVISION.
-           DISPLAY 'demo v2'.
+           DISPLAY 'demo v2.1'.
 
            STOP RUN.
 
