@@ -1,12 +1,6 @@
        ID DIVISION.
        PROGRAM-ID. DATDEMO.
-      *    THIS DEMONSTRATES Impact build with CICS/BMS
-      *
-      * region is cicsts56  on my zdt_cics vtam session
-      * wip - cmci for zDT test
-      * Tran ='DAT0' in rpl NLOPEZ.IDZ.LOAD
-      * zapp is cloned to my tmp by the pipeline process
-      * displays are in cics stc sysout
+      *  v2  
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
        DATA DIVISION.
@@ -17,7 +11,7 @@
       * My test with my pre-built map
 
          PROCEDURE DIVISION.
-           DISPLAY 'demo v.a.9'.
+           DISPLAY 'demo v2'.
 
            STOP RUN.
 
