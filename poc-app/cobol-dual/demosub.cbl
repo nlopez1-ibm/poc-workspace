@@ -9,4 +9,4 @@
        01 MYDATA              PIC X(1).
        01 MYDATA2             PIC X(1).
        PROCEDURE DIVISION.          
-           DISPLAY 'DemoSub HERE In DUAL mode - test v2.1    '.
+           DISPLAY 'DemoSub HERE In DUAL mode - test v2.2    '.
