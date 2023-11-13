@@ -1,26 +1,3 @@
-## notes on usage NLopez
-## IBM Open Editor v3 now takes zapp.yaml files and some vsCode settings.json definitions to setup a user build
-## I've added comments on this example to explain how it works 
-##  
-## First install zowe and ibm open editor extensions
-## create a zowe profile for zosmf (VSI) and ssh
-## add them as the default in settings.json:
-##    "zopeneditor.zowe": { 			
-##       "defaultCliProfile": "zosmf",			
-##       "defaultSshCliProfile": "ssh"		 	
-##    },
-## 
-##
-## Add these required settings to settings.json - (dont have to pre-define the dir):
-##  "zopeneditor.userbuild.userSettings": {
-##     "dbbWorkspace": "/u/ibmuser/vsCode_workspace",
-##     "dbbHlq": "IBMUSER.VSCODE",
-##     "dbbLogDir": "/u/nlopez/vsCode_workspace/logs" 
-##   }, 
-
-## use the userSettings variable below
-
-
 name: poc-app-zapp
 description: Nelson example IBM Z Open Editor 3.0.0 zapp.yaml 
 version: 3.0.0
@@ -31,37 +8,23 @@ profiles:
   - name: dbb-userbuild
     type: dbb
     settings:
-# this is misleading as it the high level folder for the app folder.  should be DBBworkspace    
       application: poc-workspace
-
-# DBB_HOME as set by .profile and the installed zappbuild folder 
       command: "$DBB_HOME/bin/groovyz "
       buildScriptPath: "/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy"
-
-# Standard user build options with refs to settings.json 
       buildScriptArgs:
         - "--userBuild"
-# add teh workspace folder         
         - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}/${application}"
         - "--application poc-app"
         - "--hlq  ${zopeneditor.userbuild.userSettings.dbbHlq}"
         - "--outDir  ${zopeneditor.userbuild.userSettings.dbbLogDir}"
-# Not used 
-#        - "--dependencyFile ${dependencyFile}"
-
-# stuff to copy to uss workspace
       additionalDependencies:
         - "**/application-conf"
         - "zapp*"
 
-# stuf to copy to vsCode workspace
       logFilePatterns:
         - "${buildFile.basename}.log"
         - "BuildReport.*"
 
-
-# other files scanned by the editor to copy to USS 
-# and other PDSs (not really used)
 propertyGroups:
   - name: cobol-copybooks
     language: cobol
