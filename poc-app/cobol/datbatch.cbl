@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: test v2.3'.
+           DISPLAY 'DATBATCH: test v4'.
            CALL 'DEMOSUB'.
                                                                                 
            STOP RUN.
