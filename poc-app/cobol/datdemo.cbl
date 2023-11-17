@@ -11,7 +11,7 @@
       * My test with my pre-built map
 
          PROCEDURE DIVISION.
-           DISPLAY 'demo v5.1 IDENT'.
+           DISPLAY 'demo v5.2 IDENT'.
 
            STOP RUN.
 
