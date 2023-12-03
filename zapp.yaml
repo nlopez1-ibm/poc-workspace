@@ -9,8 +9,10 @@ profiles:
     type: dbb
     settings:
       application: poc-workspace
-      command: "$DBB_HOME/bin/groovyz "
-      buildScriptPath: "/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy"
+      
+      #command: "sh . ~/.profile;ls -lsaT $DBB_HOME/groovy/bin; groovy --version ; $DBB_HOME/bin/groovyz"
+      command: "$DBB_HOME/bin/groovyz"
+      buildScriptPath: "$DBB_HOME/dbb-zappbuild/build.groovy"
       buildScriptArgs:
         - "--userBuild"
         - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}/${application}"
