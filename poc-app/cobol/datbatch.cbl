@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: jen 4'.
+           DISPLAY 'DATBATCH: jen 5'.
            CALL 'DEMOSUB'.
                                                                                 
            STOP RUN.
