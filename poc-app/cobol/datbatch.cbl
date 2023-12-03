@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: NatWest v5'.
+           DISPLAY 'DATBATCH: jen 3'.
            CALL 'DEMOSUB'.
                                                                                 
            STOP RUN.
