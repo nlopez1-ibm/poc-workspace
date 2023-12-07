@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: jen 8'.
+           DISPLAY 'DATBATCH: sh -L test'.
            CALL 'DEMOSUB'.
                                                                                 
            STOP RUN.
