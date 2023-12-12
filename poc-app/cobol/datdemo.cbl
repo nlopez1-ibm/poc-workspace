@@ -11,7 +11,7 @@
       * My test with my pre-built map
 
          PROCEDURE DIVISION.
-           DISPLAY 'demo depth check'.
+           DISPLAY 'demo depth check c2'.
 
            STOP RUN.
 
