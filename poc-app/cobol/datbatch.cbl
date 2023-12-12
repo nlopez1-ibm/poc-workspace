@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: gitView d3'.
+           DISPLAY 'DATBATCH:  break build
            CALL 'DEMOSUB'.
 
            STOP RUN.
