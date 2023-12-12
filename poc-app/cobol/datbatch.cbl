@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: sh -L test'.
+           DISPLAY 'DATBATCH: gitView'.
            CALL 'DEMOSUB'.
-                                                                                
+
            STOP RUN.
