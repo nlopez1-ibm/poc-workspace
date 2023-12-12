@@ -11,7 +11,7 @@
       * My test with my pre-built map
 
          PROCEDURE DIVISION.
-           DISPLAY 'demo v5.4 IDENT'.
+           DISPLAY 'demo depth check'.
 
            STOP RUN.
 
