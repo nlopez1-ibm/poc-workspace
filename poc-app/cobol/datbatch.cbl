@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: fix demo 9'.
+           DISPLAY 'DATBATCH: fix demo 10'.
            CALL 'DEMOSUB'.
 
            STOP RUN.
