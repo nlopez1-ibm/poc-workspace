@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH:  break build
+           DISPLAY 'DATBATCH:  break build'.
            CALL 'DEMOSUB'.
 
            STOP RUN.
