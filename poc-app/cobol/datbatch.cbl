@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: test shallow passed'.
+           DISPLAY 'DATBATCH: test shallow passed v2'.
            CALL 'DEMOSUB'.
 
            STOP RUN.
