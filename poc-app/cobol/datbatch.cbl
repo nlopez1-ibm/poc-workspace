@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: test shallow passed v2'.
+           DISPLAY 'DATBATCH: new wass Image dec 2023'.
            CALL 'DEMOSUB'.
 
            STOP RUN.
