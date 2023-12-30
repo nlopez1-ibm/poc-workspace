@@ -14,7 +14,7 @@
        COPY DATDEPND.
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: new wass Image dec 2023 v3a.
+           DISPLAY 'DATBATCH: new wass Image dec 2023 v3a'.
            CALL 'DEMOSUB'.
 
            STOP RUN.
