@@ -12,6 +12,9 @@
           05  num2         PIC 9(3) value is 003.
       *
        COPY DATDEPND.
+      * Demo shared copybook 
+       COPY DATSHARE.
+       
       *
        PROCEDURE DIVISION.
            DISPLAY 'DATBATCH: new wass Image dec 2023 v5 '.
