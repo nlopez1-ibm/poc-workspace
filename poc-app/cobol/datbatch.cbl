@@ -14,7 +14,7 @@
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: new wass Image dec 2023 v5 '.
+           DISPLAY 'DATBATCH: new wass Image dec 2023 v6'.
 
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
