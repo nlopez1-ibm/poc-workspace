@@ -19,7 +19,8 @@
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
 
-      * And a  Static in another repo      
+      * And a  Static in another repo 
+      * doc chg to force a impact and rebuild of static1 from here?     
            CALL 'STATIC1'.
 
            STOP RUN.
