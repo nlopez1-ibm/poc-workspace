@@ -6,6 +6,7 @@
 
 def myAgent  = 'zvsi'
 def repo = 'git@github.com:nlopez1-ibm/poc-workspace.git'
+def Common = "git@github.com:nlopez1-ibm/Common.git"
 
 def dbbbuild ='/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy'
 def appworkspace = 'poc-workspace'
@@ -28,6 +29,8 @@ pipeline {
                     sh 'rm -rf *'
                     sh 'git clone ' + repo 
                     sh 'cd ' + appworkspace  + '; git log --graph --oneline --decorate -n 3'
+                    sh 'git clone  -b main ' + Common 
+                    
                 }
             }          
         }  
