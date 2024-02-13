@@ -18,8 +18,8 @@
 
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
-           
-      * An Static in another repo      
-           CALL STATIC1.
+
+      * And a  Static in another repo      
+           CALL 'STATIC1'.
 
            STOP RUN.
