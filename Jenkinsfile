@@ -12,7 +12,9 @@ def dbbbuild ='/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/build.groovy'
 def appworkspace = 'poc-workspace'
 def appname = 'poc-app'
 
-def ucdPublish = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts/UCD/dbb-ucd-packaging.groovy' 
+//def ucdPublish = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts/UCD/dbb-ucd-packaging.groovy' 
+def ucdPublish = '/u/ibmuser/waziDBB/dbb-v2/dbb-zappbuild/scripts/CD/UCD_Pub.sh'
+
 def buzTool  = '/u/ibmuser/ibm-ucd/agent/bin/buztool.sh'
 def ucdComponent = 'poc-component'
 
@@ -58,7 +60,8 @@ pipeline {
             steps {
                 println  '** Package and Publish to UCDs CodeStation...'                  
                 script {
-                    sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
+                    // sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
+                    sh  ucdPublish ${env.BUILD_NUMBER} ucdComponent ${WORKSPACE}+'/'+appworkspace  
                 }
             }
         }        
