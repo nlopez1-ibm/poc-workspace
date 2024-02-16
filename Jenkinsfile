@@ -61,8 +61,8 @@ pipeline {
                 println  '** Package and Publish to UCDs CodeStation...'                  
                 script {
                     // sh 'groovyz ' + ucdPublish + ' --buztool ' + buzTool  + ' --workDir ${WORKSPACE}/'+appworkspace + ' --component ' + ucdComponent + ' --versionName ${BUILD_NUMBER}'
-                    sh  ucdPublish + ' ' + BUILD_NUMBER + ' ' + ucdComponent + ' ' + ${WORKSPACE}+'/'+appworkspace  
-                }
+                    sh  ucdPublish + ' ${BUILD_NUMBER} ' + ucdComponent + ' ${WORKSPACE}/'+appworkspace  
+                } 
             }
         }        
     }   
