@@ -9,13 +9,13 @@
           05  num1         PIC 9(3) value is 000.
        COPY DATDEPND.
 
-      * Demo shared copybook 
+      * A copybook in a shared repo  
        COPY DATSHARE.
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: new wass Image dec 2023 v6'.
-
+           DISPLAY 'DATBATCH: Main Line v1.2'.
+           Display shared-f1.                                                  
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
 
