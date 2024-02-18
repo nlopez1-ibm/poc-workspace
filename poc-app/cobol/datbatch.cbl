@@ -14,7 +14,7 @@
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: Main Line v1.3 v2'.
+           DISPLAY 'DATBATCH: Main Line v1.4'.
            Display shared-f1.                                                  
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
