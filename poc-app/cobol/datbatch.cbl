@@ -14,7 +14,7 @@
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: Main Line dbbAudit test run v1.5'.
+           DISPLAY 'DATBATCH: Main Line dbbAudit test run relink'.
            Display shared-f1.                                                  
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
