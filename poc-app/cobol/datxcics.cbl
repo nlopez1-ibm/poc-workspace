@@ -7,5 +7,5 @@
        WORKING-STORAGE SECTION.
 
        PROCEDURE DIVISION.
-           DISPLAY 'hello ball ... - v1.2209'.
+           DISPLAY 'hello ball ... - v2'.
            STOP RUN.

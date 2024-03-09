@@ -1,4 +1,4 @@
-WTO2     CSECT   *  v2
+WTO2     CSECT   *  v3
          SAVE  (14,12),,*            SAVE REGISTERS
          BALR  12,0
          USING *,12
@@ -14,6 +14,6 @@ DO       WTO   'DEBUG: NELSON TEST RCode11',ROUTCDE=(11)
 **********************************************************************
 SAVEAREA DS    18F
 *        TESTCOPY
-*        COPY   TESTCP2
+         COPY   MAC3
          SPACE 2
          END
