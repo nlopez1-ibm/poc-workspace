@@ -13,7 +13,8 @@ DO       WTO   'DEBUG: NELSON TEST RCode11',ROUTCDE=(11)
          RETURN (14,12),,RC=(15)
 **********************************************************************
 SAVEAREA DS    18F
-*        TESTCOPY
-         COPY   MAC3
+         TESTCOPY
+*         COPY   TESTCOPY
          SPACE 2
          END
+* NEED TO CONF ZAPP FILE FOR MACLIBS?? NOT FOUND 
