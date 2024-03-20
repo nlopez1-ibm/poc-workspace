@@ -8,5 +8,40 @@
 			"path": "../Common"
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "zOpenDebug",
+				"request": "launch",
+				"name": "Z Open Debug: Connect to a parked debug session",
+				"connection": {
+					"type": "zowe",
+					"name": "myDebug"
+				}
+			},
+			{
+				"type": "zOpenDebug",
+				"request": "launch",
+				"name": "Z Open Debug: Connect to a parked debug session",
+				"connection": {
+					"type": "zowe",
+					"name": "myDebug"
+				},
+				"applicationLaunch": {
+					"commandLine": ""
+				}
+			},
+			{
+				"type": "zOpenDebug",
+				"request": "attach",
+				"name": "Z Open Debug: List parked debug sessions",
+				"connection": {
+					"type": "zowe",
+					"name": "myDebug"
+				}
+			}
+		]
+	}
 }
