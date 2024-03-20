@@ -1,3 +1,4 @@
-       IDENTIFY    "IBM DBB v2 Build"
-       ENtRY       DEMOSUB
+       IDENTIFY    DEMOSUB("IBM DBB v2 Build")
        NAME        DEMOSUB(R)
+       ENTRY       DEMOSUB
+       
