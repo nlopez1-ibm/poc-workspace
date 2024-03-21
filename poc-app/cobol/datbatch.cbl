@@ -14,7 +14,7 @@
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: Main Audit test v6'.
+           DISPLAY 'DATBATCH: Main Audit test v7'.
            Display shared-f1.                                                  
       * Call a static sub in this repo     
            CALL 'DEMOSUB'.
