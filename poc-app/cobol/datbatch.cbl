@@ -14,7 +14,7 @@
        
       *
        PROCEDURE DIVISION.
-           DISPLAY 'DATBATCH: Main Audit test v9'.
+           DISPLAY 'DATBATCH: Main pgm test'.s
            Display shared-f1.                                                  
       * Call a static sub in this repo  
       * disabale all static calls to test dep  in src scan phase    
