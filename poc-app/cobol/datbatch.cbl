@@ -18,10 +18,10 @@
            Display shared-f1.                                                  
       * Call a static sub in this repo  
       * disabale all static calls to test dep  in src scan phase    
-      *     CALL 'DEMOSUB'.
+           CALL 'DEMOSUB'.
 
       * And a  Static in another repo 
       * doc chg to force a impact and rebuild of static1 from here?     
-      *     CALL 'STATIC1'.
+           CALL 'STATIC1'.
 
            STOP RUN.
