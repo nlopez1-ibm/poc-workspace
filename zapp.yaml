@@ -28,14 +28,6 @@ profiles:
         - "BuildReport.*"
 
 propertyGroups:
-  - name: asm-maclib
-    language: asm
-    libraries:
-      - name: syslib
-        type: local
-        locations:
-          - "**/maclib"
- 
   - name: cobol-copybooks
     language: cobol
     libraries:
