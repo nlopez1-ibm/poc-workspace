@@ -1,6 +1,6 @@
 poc-app/cobol/datdemo.cbl
 poc-app/cobol-dual/demosub.cbl
-poc-app/cobol-dual/demosub.cbl
+poc-app/asm/datwto.asm
 poc-app/bms/datmapm.bms
 poc-app/cobol/datbatch.cbl
 poc-app/cobol-dual/demosub.cbl
