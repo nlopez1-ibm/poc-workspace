@@ -12,7 +12,7 @@
       * A copybook in a shared repo  
        COPY DATSHARE.
        
-      *
+      * 
        PROCEDURE DIVISION.
            DISPLAY 'DATBATCH: Main pgm test test'.
            Display shared-f1.                                                  
